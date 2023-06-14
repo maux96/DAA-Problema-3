@@ -40,3 +40,7 @@ Por lo anterior expuesto si el problema dado tiene una complejidad polinomial po
 
 ## Solución
 
+Por cada uno de los subconjuntos dados se va a comprobar que la interseccion sea nula con un conjunto acumulado (inicialmente en el conjunto vacío), cada vez que se evalue si un subconjunto tiene intersección nula con el conjunto acumulado se va a unir a este formando parte de el de ser cierto, esto se va hacer recursivamente hasta que se llegue a que se han unido k subconjuntos al conjunto acumulado, de no lograrse llegar a los k subconjuntos unidos, el problema no tiene solución.
+
+#### Complejidad
+La complejidad de recorrer los n subconjuntos por cada entrada recursiva seria en total $O(n^n)$ esto no es necesario, pues la operación que se va a llevar a cabo es la intersección o unión la cuál es simétrica por lo que no es necesario comprobar si un conjunto anteriormente comprobado tiene intersección nula con el actual (pues ya vamos a haberlo comprobado) por lo que sería $O(n!)$, también hay que hacer la unión de dos conjuntos en cada entrada recursiva, esto tiene complejidad $O(m)$ siendo $m$ la máxima cantidad de elementos(días), luego la complejidad final sería $O(m·n!)$ siendo $m$ la cantidad de días máxima que tiene una propuesta y $n$ la cantidad de propuestas. 
