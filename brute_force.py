@@ -18,13 +18,7 @@ def solution(k: int,lists: list[set[int]]):
     return _solution(k, lists, set(), 0)
 
 
-if __name__=='__main__':
-    # k: cantiad de cursos
-    # n: total de propuestas
-    # lists: lista de propuestas
-    k, n=map(int,input().split())
-    lists=[]
-
-    for i in range(n):
-        lists.append(set(map(int, input().split())))
-    print(solution(k, lists))
+if __name__ == '__main__':
+    k,n=3,5
+    lists = [{98, 67, 37, 16, 86, 23, 91, 28}, {78, 81, 56, 57, 88, 31}, {24, 67, 59, 4}, {97, 71, 78, 47, 53, 89, 93}, {49, 77, 25, 87}, {75, 19, 50, 23}]
+    print(solution(k,lists))
