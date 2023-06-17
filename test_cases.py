@@ -1,5 +1,6 @@
-import heuristica
 import brute_force
+import heur 
+
 import random
 
 def generate_case(n):
@@ -25,7 +26,8 @@ def start(n):
         case_1 = [c for c in case]
         k = random.randint(1,r-1)
         
-        r_heuristic = heuristica.first_min_intersection(k, case)
+        #r_heuristic = heuristica.first_min_intersection(k, case)
+        r_heuristic = heur.solution(k, case)
         r_brute = brute_force.solution(k, case_1)
         print(str(n) + ".  k = "+str(k) + "    n = " + str(r))
         if r_heuristic != None:

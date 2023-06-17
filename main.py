@@ -1,11 +1,12 @@
-# import brute_force
-# import heuristica
 import test_cases
-if __name__=='__main__':
-    while (True):
-        n = int(input())
-        test_cases.start(n)
 
+if __name__=='__main__':
+   while (True):
+       n = int(input())
+       test_cases.start(n)
+
+   
+      
 
 
 
